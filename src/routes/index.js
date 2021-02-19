@@ -1,16 +1,14 @@
 const express = require('express');
 const router = express.Router();
-// const routerAuth = require('./auth')
-// const routerUser = require('./user')
-// const routerTransfer = require('./transfer')
-// const routerHistory = require('./history')
-// const routerAdmin = require('./admin')
+const labels = require('./labels');
+const todos = require('./todos');
+const auth = require('./auth');
+const admin = require('./admin');
 
-router;
-// .use('/auth', routerAuth)
-// .use('/user', routerUser)
-// .use('/transfer', routerTransfer)
-// .use('/history', routerHistory)
-// .use('/admin', routerAdmin)
+router
+  .use('/labels', labels)
+  .use('/todos', todos)
+  .use('/auth', auth)
+  .use('/admin', admin);
 
 module.exports = router;
