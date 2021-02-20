@@ -8,6 +8,10 @@ exports.updateTodos = (req, res) => {
     data += items
   })
   updateTodos(data.slice(0, data.length - 1))
-    .then(() => response(res, 'Success Update Todos', 200, null))
+    .then((result) =>
+      result.affectedRows >= 1
+        ? response(res, 'Success Update Todos', 200, null)
+        : reject(res, null, 400, 'Failed Update Todos')
+    )
     .catch((err) => reject(res, null, 500, { msg: 'Database is error', err }))
 }

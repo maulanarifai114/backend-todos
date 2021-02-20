@@ -6,7 +6,7 @@ exports.createTodo = (req, res) => {
   const { labelId, task } = req.body
   createTodo({ user_id: userId, label_id: labelId, task })
     .then((result) => {
-      result.affectedRows === 1
+      result.affectedRows >= 1
         ? response(res, 'Success Create Todo', 201, null)
         : reject(res, null, 400, 'Failed Create Todo')
     })

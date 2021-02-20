@@ -7,7 +7,7 @@ const todos = {
   getAllTodos: (id) => {
     return actionQuery(
       `
-      SELECT todos.id, todos.completed, task, label, description FROM todos
+      SELECT todos.id, todos.completed, task, label, description, color FROM todos
       INNER JOIN labels ON labels.id = todos.label_id
       WHERE todos.user_id = ${id}`
     )
