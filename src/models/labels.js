@@ -7,6 +7,9 @@ const todos = {
   getAllLabels: () => {
     return actionQuery('SELECT * FROM labels')
   },
+  getOneLabel: (id) => {
+    return actionQuery(`SELECT * FROM labels WHERE id = ${id}`)
+  },
   updateLabels: (data, id) => {
     return actionQuery(`UPDATE labels SET ? WHERE id = ${id}`, data)
   },
