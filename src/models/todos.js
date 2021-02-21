@@ -9,7 +9,8 @@ const todos = {
       `
       SELECT todos.id, todos.label_id, todos.completed, task, label, description, color FROM todos
       INNER JOIN labels ON labels.id = todos.label_id
-      WHERE todos.user_id = ${id}`
+      WHERE todos.user_id = ${id}
+      ORDER BY todos.id DESC`
     )
   },
   updateTodos: (data) => {
