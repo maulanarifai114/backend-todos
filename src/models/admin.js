@@ -1,8 +1,8 @@
 const { actionQuery } = require('../helpers/helper')
 
 const todos = {
-  getAllUsers: () => {
-    return actionQuery('SELECT * FROM users')
+  getAllUsers: (id) => {
+    return actionQuery(`SELECT * FROM users WHERE id != ${id}`)
   },
   updateUsers: (data, id) => {
     return actionQuery(`UPDATE users SET ? WHERE id = ${id}`, data)

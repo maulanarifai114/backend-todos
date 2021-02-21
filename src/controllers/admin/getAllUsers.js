@@ -3,9 +3,8 @@ const { getAllUsers } = require('../../models/admin')
 
 exports.getAllUsers = (req, res) => {
   if (req.id.toString() === process.env.ADMIN) {
-    getAllUsers()
+    getAllUsers(req.id)
       .then((result) => {
-        result.shift()
         result.length === 0
           ? response(res, 'Users is empty', 200, null)
           : response(res, result, 200, null)
