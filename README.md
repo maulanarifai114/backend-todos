@@ -1,20 +1,20 @@
 # Backend Todos
 
-# Prerequisite
+## Prerequisite
 
-## 1. Download Repository
+### 1. Download Repository
 
 ```
 git clone https://github.com/maulanarifai114/backend-todos.git
 ```
 
-## 2. Install Package
+### 2. Install Package
 
 ```
 npm install
 ```
 
-## 3. Set up ENV
+### 3. Set up ENV
 
 ```
 PORT = YOUR_PORT_SERVER
@@ -26,19 +26,19 @@ SECRET_KEY = SECRET_KEY_FOR_JWT
 ADMIN = YOUR_ADMIN_ID
 ```
 
-## 4. API Postman
+### 4. API Postman
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/d05a2f42f0d9bf53f2e9)
 
-## 5. Run Server
+### 5. Run Server
 
-### Run Development Mode
+#### Run Development Mode
 
 ```
 npm run dev
 ```
 
-### Run Production Mode
+#### Run Production Mode
 
 ```
 npm start
